@@ -1,0 +1,189 @@
+<% include ./partials/header.ejs  %>
+
+
+<div class="row">
+				<!-- Main Article -->
+				<div class="col" id="topper">
+					
+					<article>
+						<!-- article -->
+						<section style="padding : 50px">
+							<div class="container">
+							
+
+							<%- main.Post %>
+
+							
+						</div>
+						</section>
+						<!-- / -->
+						<!-- Newsletter Optin -->
+						<section class="email-optin black-bg">
+							<div class="col">
+								<div class="row">
+									<div class="col-md-4" id="optin-img">
+										<!-- Product Image -->
+										<img src="static/img/free.jpg" class="img-responsive">
+									</div>
+									<div class="col-md-8" id="optin-form">
+										<!-- optin form and Lead -->
+										 <p><h2 class="title">Don’t have time to read the whole guide right now?</h2>
+										<br>
+										
+										<%- freebie.Post %>
+										<button class="btn btn-block btn-success btn-lg"  data-micromodal-trigger="modal-2">DOWNLOAD NOW</button>
+
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- / -->
+
+						<!-- Write more on the product -->
+						<section class="grey-bg white">
+							
+							<%- _catch.Post %>
+							
+						</section>
+						<!-- / -->
+
+
+						<!-- The final Optin form -->
+
+						<section>
+
+							<div class="col">
+								<div class="row">
+									<div class="col-md-4" id="optin-img">
+										<!-- Product Image -->
+										<img src="static/img/free.jpg">
+									</div>
+									<div class="col-md-8" id="optin-form">
+										<!-- optin form and Lead -->
+										 <%- freebie.Post %>
+
+										<button class="btn btn-block btn-success btn-lg ht-3" data-micromodal-trigger ="modal-2">Yes! Give me the PDF</button>
+
+									<span class="lead display-5">
+											<small>Don't have cash now ?.. lets send you a free pdf to get you started.</small>
+										</span>
+
+									</div>
+								</div>
+							</div>
+
+						</section>
+						<!-- / -->
+
+						<!-- Mobile Testimonies -->
+						<section class="sm-screen-only" id="testimonies">
+							<h2 style="text-align: center">What People Are Saying ?</h2>
+								<div class="container">
+									<div class="row">
+										<div class="col-md-4">
+										<div class="card my-3">
+										
+											<div class="card-body">
+												<h4 class="card-title">Samson Afeh </h4>
+												<div class="card-text">
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+													tempor incididunt ut labore et dolore magna aliqua.
+												</div>
+											</div>
+										</div>
+									</div><!-- / col md 4--> 
+									<div class="col-md-4">
+										<div class="card my-3">
+											<div class="card-body">
+												<h4 class="card-title"> Gabriel Ajayi </h4>
+												<div class="card-text">
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+													tempor incididunt ut labore et dolore magna aliqua.
+												</div>
+											</div>
+										</div>
+									</div><!-- / col md 4-->
+									<div class="col-md-4">
+										<div class="card my-3">
+											<div class="card-body">
+												<h4 class="card-title">Bryan stone </h4>
+												<div class="card-text">
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+													tempor incididunt ut labore et dolore magna aliqua.
+												</div>
+											</div>
+										</div>
+									</div><!-- / col md 4-->
+								</div>
+							</div>
+						</section>
+						<!-- / -->	
+						
+
+
+
+					</article>
+
+					
+					<!-- floating testimonies for PC -->
+
+	<div class="section-testimonies mr-3 lg-screen-only" id="testimonials">
+
+		<div class="carousel slide" id="carousel-example-generic"  data-ride="carousel">
+			<div class="testimonial-container">
+	
+		<div class="carousel-inner animated rotateIn" role = "listbox">
+			<div class="carousel-item  active">
+			<div class="testimonial-header"><img src="static/img/testi.jpg">
+			<strong>Gabriel Ajaji : </strong>
+			</div>
+
+			This is a very Great product, i don't regret after buying it ever.
+		</div>
+
+		<div class="carousel-item animated rotateIn">
+		
+
+			<div class="testimonial-header"><img src="static/img/testi1.jpg">
+			<strong>Samson afeh : </strong>
+			</div>
+
+			This is a very Great product, i don't regret after buying it ever.
+		</div>
+
+		<div class="carousel-item animated rotateIn">
+		
+
+			<div class="testimonial-header"><img src="static/img/testi2.jpg">
+			<strong> Bryan stone : </strong>
+			</div>
+
+			This is a very Great product, i don't regret after buying it ever.
+		</div>
+
+		<div class="btm-btm">
+
+                <ul class="list-unstyled carousel-indicators">
+                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ul>
+
+              </div>
+          </div>
+
+	</div>
+	<!-- / -->
+
+					
+				
+			</div>
+		</div>
+	</div>
+
+				<!-- / -->
+				
+			
+		</div>
+
+<% include ./partials/footer.ejs  %>

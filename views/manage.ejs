@@ -1,0 +1,74 @@
+<% include ./partials/header %>
+
+	
+<div>
+  <p><center>Edit sections of the homepage</center></p>
+</div>
+
+
+        <div class="card mb-3">
+        <div class="card-header">
+
+        	<i class="fas fa-life-ring"></i>
+        	Modify Main Cntent
+        </div>
+        <br>
+
+          <form method="POST" action="/new_post">
+        	<textarea id="main_section" name="Post">  <%= main.Post %> </textarea>
+          <input type="hidden" value="main" name="Page">
+
+        	<button class="btn btn-success"> <b> save </b> </button>
+          </form>
+
+
+
+        </div>
+
+        <!-- Freebie Area -->
+
+         <div class="card mb-3">
+        <div class="card-header">
+
+        	<i class="fas fa-life-ring"></i>
+        	Modify Freebie content
+        </div>
+        <br>
+
+          <form method="POST" action="/new_post">
+        	<textarea id="main_section" name="Post">  
+          <%= freebie.Post %> </textarea>
+          <input type="hidden" value="freebie" name="Page">
+
+        	<button class="btn btn-success"> <b> save </b> </button>
+          </form>
+
+
+
+        </div>
+
+        <!-- Modify the Catch section -->
+
+         <div class="card mb-3">
+        <div class="card-header">
+
+        	<i class="fas fa-life-ring"></i>
+        	Modify catch section
+        </div>
+        <br>
+
+          <form method="POST" action="/new_post">
+        	<textarea id="main_section" name="Post">  
+
+          <%= _catch.Post %> </textarea></textarea>
+          <input type="hidden" value="catch" name="Page">
+
+        	<button class="btn btn-success"> <b> save </b> </button>
+          </form>
+
+
+
+        </div>
+
+
+<% include ./partials/footer %>

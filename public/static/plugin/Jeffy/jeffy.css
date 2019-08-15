@@ -1,0 +1,133 @@
+/***************************
+@package Jeffy Cascadin Stylesheet
+@author Jeffery Selly
+@desc Simple CSS for formatting straight to the point without depending on inline styling
+
+****************************/
+
+/*=======================
+Default Fonts
+==========================*/
+@font-face {
+    font-family: 'ABeeZee';
+    src: url('font/ABeeZee-Regular.otf');
+}
+
+body{
+	font-family: 'ABeeZee',sans-serif;
+	margin-bottom : 0;
+	font-weight: 100;
+	font-smoothing: antialiased;
+	line-height: inherit;
+}
+
+
+
+/* ===================
+Backgrounds 
+=======================*/
+.grey-bg{
+	background-color: grey;
+	color : black;
+}
+.green-bg{
+	background-color: #71c55d;
+	color : white;
+}
+.black-bg{
+	background-color: #000;
+	color : white;
+}
+.white-bg{
+	background-color: #fff;
+	color : white;
+}
+.blue-bg{
+	background-color: blue;
+	color : white;
+}
+
+/* ============================
+Height
+=============================*/
+.ht-1{
+  height : 1.5rem;
+}
+.ht-2{
+  height : 2.5rem;
+}
+.ht-3{
+  height : 3.5rem;
+}
+.ht-4{
+  height : 4.5rem;
+}
+.ht-5{
+  height : 5.5rem;
+}
+
+/* ==================================
+Font Height 
+=====================================*/
+.font-ht-1{
+	font-size: 10px
+}
+.font-ht-2{
+	font-size: 20px
+}
+.font-ht-3{
+	font-size: 30px
+}
+.font-ht-4{
+	font-size: 40px
+}
+.font-ht-5{
+	font-size: 50px
+}
+
+/*==================================
+Text color 
+======================================*/
+.grey{
+	
+	color : grey;
+}
+.green{
+	color: #71c55d;
+	
+}
+.black{
+	color: #000;
+	
+}
+.white{
+	color: #fff;
+	
+}
+.blue{
+	color: blue;
+	
+}
+
+/* ===============================
+ 	Screen size visibility Status and other
+ ====================================*/
+ .lg-screen-only{
+    display: block;
+  }
+.sm-screen-only{
+  display : none;
+}
+@media screen and (max-width : 1300px){
+
+  .lg-screen-only{
+    display: none;
+  }
+  .sm-screen-only{
+    display : block;
+  }
+   
+}
+.jeffy-hide{
+	display: none;
+}

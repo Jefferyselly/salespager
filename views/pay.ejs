@@ -1,0 +1,26 @@
+<% include ./partials/header %>
+
+
+<div class='topper'>
+<center><small class='text-muted'> Proceed with your payment using your ATM card(VERVE, VISA & ATM):</small></center>
+<img src='static/img/paystack_logo.jpg'/>
+ 
+              <div id="paystack-payment" class='container'>
+              <p><strong>Provide a valid email address for a great service.</strong></p>
+
+              <form method = "post" action = "/paystack/pay">
+                <input type="text" name="email" placeholder="Email" class="form-control">
+                <br>
+                <input type="text" name="full_name" placeholder="Full Name" class="form-control">
+                <br>
+                <input type="hidden" name ="amount" value="1500">
+                <button type="submit" class="btn btn-success">Pay </button>
+              </form>
+            </div>
+          <!-- / -->
+
+
+
+</div>
+
+<% include ./partials/footer %>
