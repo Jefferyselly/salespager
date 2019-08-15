@@ -51,49 +51,48 @@ app.set('view_engine', 'ejs');
 
 app.get('/', (req,res) => {
 
-    // contentDB.findOne({Page : "main"}).then((main) => {
-    //      if(main == null){
+    contentDB.findOne({Page : "main"}).then((main) => {
+         if(main == null){
 
-    //              main = new Object
-    //             main.Post =  "No content here"
+                 main = new Object
+                main.Post =  "No content here"
  
-    //         }
+            }
 
-    //     contentDB.findOne({Page : "freebie"}).then((freebie) => {
-    //          if(freebie == null){
+        contentDB.findOne({Page : "freebie"}).then((freebie) => {
+             if(freebie == null){
 
-    //              freebie = new Object
-    //             freebie.Post = "Edit here for freebie section"
-
-
-                
-    //         }
-
-    //         contentDB.findOne({Page : "catch"}).then((_catch) => {
-    //              if(_catch == null){
-
-    //              _catch = new Object
-    //             _catch.Post = "Edit here for freebie section"
+                 freebie = new Object
+                freebie.Post = "Edit here for freebie section"
 
 
                 
-    //         }
+            }
+
+            contentDB.findOne({Page : "catch"}).then((_catch) => {
+                 if(_catch == null){
+
+                 _catch = new Object
+                _catch.Post = "Edit here for freebie section"
 
 
-    // res.render('index.ejs', 
-    //     {main,
-    //         freebie,
-    //         _catch,
-    //         config})
+                
+            }
+
+
+    res.render('index.ejs', 
+        {main,
+            freebie,
+            _catch,
+            config})
         
-    // })
+    })
 
-    // })
+    })
 
 
-    // })
+    })
 
-    res.send(1);
 
 });
 
