@@ -3,10 +3,19 @@ const {mongoose} = require('./../db/mongoose');
 let paymentSchema = new mongoose.Schema({
 
 	
-	transactionID : {
+	reference : {
 		type : String
 	},
-	body : {
+	amount : {
+		type : String
+	},
+	status : {
+		type : String
+	},
+	channel : {
+		type : String
+	},
+	currency : {
 		type : String
 	}
 	

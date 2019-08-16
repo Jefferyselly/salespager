@@ -138,12 +138,15 @@ app.get('/paystack/callback', (req,res) => {
         //STORE VALUES OF BODY IN JSON 
         	 response= JSON.parse(body);
 
-             const dets = {
-                transactionID : response.data.reference,
-                body : response
+             const the_body = {
+               reference : response.data.reference,
+               amount : response.data.amount,
+               status : response.data.status,
+               channel : response.data.channel,
+               currency : response.data.currency
              }
 
-             const payment = new paymentDB(dets);
+             const payment = new paymentDB(the_body);
 
              payment.save().then((payed) => {
 
@@ -178,15 +181,15 @@ app.get('/pay', (req,res) => {
 
 //The download route 
  app.get('/download', authenticate, function (req, res) {
-        var filePath = "/files/12BOOKS.zip";
+        var filePath = __dirname+"/files/12BOOKS.zip";
 
         var filename = path.basename(filePath);
 
-        var mimetype = mime.lookup(filePath)
+        
          res.setHeader('Content-disposition', 'attachment; filename=' + filename);
-  res.setHeader('Content-type', mimetype);
+  res.setHeader('Content-type', "zip");
 
-  var filestream = fs.createReadStream(file);
+  var filestream = fs.createReadStream(filePath);
   filestream.pipe(res);
 
         // fs.readFile(__dirname + filePath , function (err,data){

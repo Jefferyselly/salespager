@@ -12,7 +12,7 @@ let config = {
 
 			youtubeURI : "",
 
-			sitename : "Booknaija",
+			sitename : "SellyLABS",
 
 			/* ## PERSONAL INFORMATION  ##*/
 
@@ -24,11 +24,24 @@ let config = {
 
 			/* ## WEBPAGE INFORMATION ## */
 
-			websiteName : "Jeffy Products",
+			
 
 			websiteURI : "http://jeffy.com",
 
 			/* ## OG ## */
+			ogUrl : "https://sellylabs.herokuapp.com",
+
+			ogTitle : " Making money online the Right Way",
+
+			ogDescription : "If you are probably looking for a better way to earn extra income , or just searching for unique and functioning ways to make money online, then you are welcome to this ultimate guide that presents various ways you can leverage on oppourtunities found on the internet.",
+
+			ogType : "Article",
+
+			ogImage : "/static/img/internet-money.jpg",
+
+			fb_admins : "581573205619543",
+
+			ogSitename : "SellyLABS"
 
 }
 
