@@ -316,3 +316,18 @@ function authenticate(req,res,next){
 app.listen(port, () => {
     console.log('The server is running');
 });
+
+// Route not found (404)
+app.use(function(req, res, next) {
+  return res.status(404).render('404.ejs', {
+  config
+  });
+});
+
+// 500 - Any server error
+app.use(function(err, req, res, next) {
+  return res.status(500).render('error.ejs',{ 
+    title : 'An Error Occured ',
+    config
+   });
+});

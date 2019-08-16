@@ -22,11 +22,8 @@ let config = {
 
 			phoneNumber : "07035142317",
 
-			/* ## WEBPAGE INFORMATION ## */
+			app_url : "sellylabs.herokuapp.com",
 
-			
-
-			websiteURI : "http://jeffy.com",
 
 			/* ## OG ## */
 			ogUrl : "https://sellylabs.herokuapp.com",
