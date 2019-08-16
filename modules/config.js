@@ -28,17 +28,7 @@ let config = {
 
 			websiteURI : "http://jeffy.com",
 
-			/* ## BANK DETAILS ## */
-
-			AccountName : "SELLY JEFFERY CHUKWUMA",
-
-			AccountNumber : "3099524640",
-
-			BankName : "FIRST BANK NIGERIA"
-
-			/* ## MAILCHIMP CONFIGURATION ## */
-
-			/* ## PAYSTACK CONFIGURATION ## */
+			/* ## OG ## */
 
 }
 
