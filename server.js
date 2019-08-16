@@ -24,6 +24,8 @@ const {contentDB} = require('./models/ContentDB.js')
 
 const path = require('path');
 
+const mime = require('mime');
+
 const _ = require('lodash');
 
 const fs = require('fs');
@@ -63,7 +65,7 @@ app.get('/', (req,res) => {
              if(freebie == null){
 
                  freebie = new Object
-                freebie.Post = "Edit here for freebie section"
+                freebie.Post = "No content here"
 
 
                 
@@ -73,7 +75,7 @@ app.get('/', (req,res) => {
                  if(_catch == null){
 
                  _catch = new Object
-                _catch.Post = "Edit here for freebie section"
+                _catch.Post = "No content here"
 
 
                 
@@ -176,12 +178,21 @@ app.get('/pay', (req,res) => {
 
 //The download route 
  app.get('/download', authenticate, function (req, res) {
-        var filePath = "/files/files.pdf";
+        var filePath = "/files/12BOOKS.zip";
 
-        fs.readFile(__dirname + filePath , function (err,data){
-            res.contentType("application/pdf");
-            res.send(data);
-        });
+        var filename = path.basename(filePath);
+
+        var mimetype = mime.lookup(filePath)
+         res.setHeader('Content-disposition', 'attachment; filename=' + filename);
+  res.setHeader('Content-type', mimetype);
+
+  var filestream = fs.createReadStream(file);
+  filestream.pipe(res);
+
+        // fs.readFile(__dirname + filePath , function (err,data){
+        //     res.contentType("application/pdf");
+        //     res.send(data);
+        // });
     });
 
  //free book route
@@ -268,8 +279,12 @@ app.post('/image_upload',(req,res) => {
 //if there is a succesful upload, send the name of the file to cloudinary for storage.
 cloudinary.uploader.upload(data.link, function(result){
 
+    console.log(result)
+
 
     data = result.url
+
+
 data = JSON.stringify({
     link  : data 
 })
