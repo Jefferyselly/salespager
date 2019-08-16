@@ -24,7 +24,7 @@ Default
 ----------------------------------*/
 @font-face {
     font-family: 'ABeeZee';
-    src: url('/font/ABeeZee-Regular.otf');
+    src: url('./font/ABeeZee-Regular.otf');
 }
 
 
