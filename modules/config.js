@@ -37,12 +37,12 @@ let config = {
 
 			ogType : "Article",
 
-			ogImage : "/static/img/internet-money.jpg",
+			ogImage : "public/static/img/internet-money.jpg",
 
 			fb_admins : "581573205619543",
 
 			ogSitename : "SellyLABS"
-
+ 
 }
 
 module.exports = {
